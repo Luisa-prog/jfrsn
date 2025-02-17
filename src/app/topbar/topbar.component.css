@@ -1,0 +1,53 @@
+.topbar {
+    background-color: #222;
+    color: #fff;
+    padding: 5px 20px;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    margin:0%;
+
+}
+
+.topbar a {
+    color: #fff;
+    text-decoration: none;
+}
+#contactos {
+
+    margin-left: 30px;
+    width: 60px;
+    height: auto;
+
+}
+.cont-container {
+
+    flex-direction:column;
+    text-align: center;
+    align-items: flex-start;
+    font-size: 10px;
+    margin-left: 30px;
+    font-family:courier New;
+}
+.cont-container h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom:0.4px;
+}
+#btn {
+    position:relative;
+    text-align: right;
+    justify-content: flex-end;
+    margin-left: 30px;
+    font-size:40px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: transparent;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+    font-size: 40px;
+}
+
+.btn:hover {
+    transform: scale (1.1);
+}
