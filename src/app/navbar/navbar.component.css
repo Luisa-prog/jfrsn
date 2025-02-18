@@ -1,20 +1,66 @@
-nav {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    color: #ddd;
-  }
-  
+/* Estilos básicos */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #3f3e3e;
+  padding: 10px;
+  position: relative; /* Mantiene el menú dentro del nav */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  z-index: 2;
+}
+
+/* Menú lateral oculto inicialmente */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #222;
+  position: absolute;
+  top: 50px; /* Alinea el menú debajo del botón */
+  left: -100%; /* Oculto fuera de la pantalla */
+  width: 200px; /* Ajusta el ancho del menú */
+  height: auto;
+  transition: left 0.3s ease-in-out;
+}
+
+ul.open {
+  left: 0; /* Muestra el menú deslizándolo */
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #aca7a7;
+  position:relative;
+}
+
+ul li ul {
+  position: obsolute;
+  top: 0;
+  left: 100%;
+  width:180px;
+  display:none;
+  background: #222;
+  border: none;
+  color: white;
+  font-size: 15px;
+
+}
+
+ul li:hover > ul{
+  display: block;
+
+
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}

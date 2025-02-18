@@ -1,9 +1,23 @@
-
-<nav>
-    <ul>
-        <li><a href="/">inicio</a></li>
-        <li><a href="/servicio">servicios</a></li>
+<nav class="navbar">
+    <button class="menu-toggle" (click)="toggleMenu()">
+        {{ isMenuOpen ? '✖' : '☰' }}
+    </button>
+    <ul [class.open]="isMenuOpen">
+        <li><a href="/">Inicio</a></li>
+        <li>
+            <a href="/servicios">Servicios</a>
+            <ul>
+                <li>Asesoramiento</li>
+                <li>Sistemas de seguridad</li>
+                <li>Mantenimiento</li>
+            </ul>
+        </li>
         <li><a href="/contacto">Contacto</a></li>
     </ul>
+    <div class="iconos-container">
+        <a href="http://www.linkedin.com"><img src="assets/iconos/lin.svg"></a>
+        <a href="http://www.instagram.com"><img src="assets/iconos/ins.svg"></a>
+        <a href="http://www.whatsapp.com"><img src="assets/iconos/wha.svg"></a>
+        
+    </div>
 </nav>
-    

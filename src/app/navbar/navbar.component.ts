@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  isMenuOpen = false;
+  isSubmenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleSubmenu(event: Event) {
+    event.preventDefault(); // Evita que el link recargue la página
+    this.isSubmenuOpen = !this.isSubmenuOpen;
+  }
 }
+
+
+
+

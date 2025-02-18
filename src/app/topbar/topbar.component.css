@@ -3,51 +3,86 @@
     color: #fff;
     padding: 5px 20px;
     align-items: center;
-    display: flex;
     font-size: 20px;
-    margin:0%;
+    border: 40px solid #222;
+    border-bottom: 0;
+    border-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5px 0;
 
 }
 
 .topbar a {
     color: #fff;
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 #contactos {
-
-    margin-left: 30px;
+    margin: 0;
     width: 60px;
     height: auto;
+    cursor:pointer;
 
 }
 .cont-container {
-
-    flex-direction:column;
-    text-align: center;
-    align-items: flex-start;
+    position: relative;
+    margin-right: 600px;
+    align-items: center;
     font-size: 10px;
-    margin-left: 30px;
-    font-family:courier New;
+    font-family: 'Courier New', monospace;
+    gap: -300px;
+
 }
-.cont-container h1 {
-    margin: 0;
-    padding: 0;
-    margin-bottom:0.4px;
+
+.btn-container{
+    display: flex;
+    gap:15px;
+    margin-top: 5px;
 }
 #btn {
-    position:relative;
-    text-align: right;
-    justify-content: flex-end;
-    margin-left: 30px;
-    font-size:40px;
-    border-radius: 8px;
-    background-color: transparent;
-    color: transparent;
-    cursor:pointer;
-    transition: transform 0.3s ease;
-    font-size: 40px;
+    left: 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    background: #222;
+    color: rgb(240, 230, 230);
+    border-radius: 8%;
+    height: 50px;
+    width: 150px;
+    overflow: hidden;
+    box-shadow: 6px 4px 3px black;
+    z-index: 1;
 }
 
-.btn:hover {
-    transform: scale (1.1);
+#btn::before {
+    content: "";
+    position: absolute; /* Cambiar a absolute para que esté por encima del botón */
+    height: 50px;
+    width: 170px;
+    inset: -3px;
+    border-radius: inherit; /* Bordes redondeados */
+    background-image: conic-gradient(rgb(255, 255, 255) 70deg, transparent 180deg);
+    animation: rotate 1s linear infinite;
+    z-index: -2;
+}
+
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(-360deg);
+    }
+}
+
+#btn::after{
+    content: "";
+    position: absolute;
+    height: 43px;
+    width: 143px;
+    background: #222;
+    inset:1.05px;
+    border-radius: inherit;
+    z-index: -1;
+    
 }
