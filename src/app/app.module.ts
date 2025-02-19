@@ -12,6 +12,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     AppComponent,
     NavbarComponent,
     TopbarComponent,
+
   ],
   imports: [
     BrowserModule,

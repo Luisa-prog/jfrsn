@@ -4,14 +4,16 @@
   flex-direction: row;
   background-color: #3f3e3e;
   padding: 10px;
-  position: relative; /* Mantiene el menú dentro del nav */
+  position: relative; 
+  align-items: center;
+  justify-content: space-between;/* Mantiene el menú dentro del nav */
 }
 
 .menu-toggle {
   background: none;
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: 35px;
   cursor: pointer;
   align-self: flex-end;
   z-index: 2;
@@ -63,4 +65,18 @@ ul li:hover > ul{
 ul li a {
   color: white;
   text-decoration: none;
+}
+
+.iconos-container {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  font-size: 20px;
+
+}
+  .iconos-container img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  
 }

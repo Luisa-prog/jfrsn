@@ -1,7 +1,4 @@
 
-<video autoplay  loop muted playsinline class="background-video">
-  <source src="assets/videos/1886449_CCTV_Surveillance_1920x1080.mp4" type="video/mp4">
-</video>
 <div class="content" role="main">
 
   <!-- Highlight Card -->
@@ -12,11 +9,18 @@
    
       <title>Rocket Ship</title>
       
-
-    <span>{{ title }} app is running!</span>
-
+      <router-outlet> </router-outlet>
+     
+     <body>
+      <div class="video">
+      <video autoplay muted loop>
+        <source src="assets/videos/back.mp4" type="video/mp4">
+      </video>
+    </div>
+     </body>
   </div>
+</div>
 
-  
 
-<router-outlet></router-outlet>
+
+
