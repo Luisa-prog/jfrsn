@@ -1,3 +1,12 @@
+.inicio {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    text-align: center;
+}
+
 .video {
     position: fixed;  /* Se mantiene en pantalla */
     top: 130px;
@@ -17,3 +26,103 @@
     object-fit: cover; /* Ajusta el video sin deformarlo */
 }
 
+
+.cotizacion {
+    width: auto;
+    background-color: rgb(36, 36, 37);
+    height: 100vh;
+    font-family: Helvetica;
+    padding: 0;
+    position:relative;
+    align-items:center;
+    text-align: center;
+    color: rgb(196, 190, 190);
+}
+
+#titulo {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-top: -250px;
+    font-size: 20px;
+    font-family: copperplate;
+    color: rgb(229, 229, 231);
+    gap: 5px; /* Espacio entre el texto y las líneas */
+}
+
+#titulo::before, #titulo::after {
+    content: "";
+    flex-grow: 1; /* Hace que las líneas se expandan */
+    height: 2px;
+    background-color: rgb(230, 42, 42);
+}
+
+#som {
+    position: relative;
+    margin-top:40px;
+    font-size: 110px;
+    opacity: 0.3;
+    font-weight: 10;
+    font-family: Brush Script MT;
+    text-align: center;
+}
+
+.cotizacion h3 {
+    position: relative;
+    top: -170px;
+    font-size: 17px;
+}
+
+.cuadro {
+    display: grid;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+    width:700px;
+    height: auto;
+    background-color: rgb(143, 145, 145);
+    position: relative;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.cuadro label {
+    display: block;
+    margin: 0 0 0 3px 0;
+    font-size: 19px;
+    color:#464040;
+
+}
+.for {
+    width:500px;
+    height: 30px;
+    position:relative;
+    margin: 0;
+    padding:4 px;
+    box-sizing: border-box;   
+    border-radius: 3px; 
+
+}
+.btn-cotizacion {
+    width: 100px;  /* Se ajusta al contenido */
+    padding: 6px 12px;  /* Botón pequeño */
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #222;
+    color: #f0e6e6;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.sobre_mi {
+width: auto;
+background-color: rgb(36, 36, 37);
+height: 100vh;
+margin: 0;
+padding: 0;
+}

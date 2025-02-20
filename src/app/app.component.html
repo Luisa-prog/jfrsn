@@ -5,19 +5,61 @@
   <div class="card highlight-card card-small">
     <app-topbar></app-topbar>
     <app-navbar></app-navbar>
-
-   
-      <title>Rocket Ship</title>
       
       <router-outlet> </router-outlet>
-     
-     <body>
+
+      <section class="inicio">
       <div class="video">
       <video autoplay muted loop>
         <source src="assets/videos/back.mp4" type="video/mp4">
       </video>
     </div>
-     </body>
+    </section>
+    <section class=" cotizacion">
+      <div id="som"><h1>jfrsn</h1></div>
+      <div id= "titulo"><h1>realizar cotizacion</h1></div>
+      <h3>llena el formulario para poderte cotizar</h3>
+      <div class="cuadro">
+         
+        <label>formulario solicitud de cotizacion: </label> 
+          <input class="for" type="text" placeholder="nombres">
+          <input class="for" type="text" placeholder="apellidos">  
+          <input class="for" type="email" placeholder="correo">  
+          <input class="for" type="tel" placeholder="celular">  
+      
+          <label>servicio de su interes:</label>  
+          
+          <select class="for">
+            <option  value="1">servicio de instalacion</option>
+            <option  value="2">servicio de mantenimiento</option>
+            <option  value="3">servicio de asesoria</option>
+          </select>
+      
+          <label>de donde nos escribes: </label>  
+          <input class="for" type="text" placeholder="ciudad"> 
+          <button class="btn-cotizacion">enviar</button>
+      </div>
+     
+    </section>
+    <section class="sobre_mi">
+      <h1>con mas de 3 años de experiencia</h1>
+      <h2> asesoria e instalacion de camaras de seguridad </h2>
+      
+      <p>
+        Con más de tres años de experiencia en la instalación, 
+        asesoría y ajuste de cámaras CCTV, he perfeccionado mi 
+        conocimiento en sistemas de videovigilancia. Me especializo
+        en tecnologías tanto analógicas como digitales, lo que
+        me permite brindar soluciones integrales y personalizadas
+        a cada cliente. Mi compromiso con la calidad y la seguridad
+        me impulsa a mantenerme actualizado en las últimas 
+        innovaciones del sector, garantizando que cada proyecto
+        se ejecute con precisión y eficiencia. Estoy dedicado 
+        a ofrecer un servicio confiable que proteja lo que más importa.
+      </p>
+
+    </section>
+
   </div>
 </div>
 
