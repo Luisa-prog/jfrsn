@@ -1,23 +1,24 @@
-.inicio {
-    width: auto;
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.video {
-    position: fixed;  /* Se mantiene en pantalla */
-    top: 130px;
-    left: 50px;
-    width: 90vw;  /* Ancho completo */
-    height: 80vh; /* Alto completo */
+.inicio {
+    width: auto;
+    height:100vh;
+    text-align: center;
+    display: flex;
+}
+
+.video {  /* Se mantiene en pantalla */
+    width: auto;  /* Ancho completo */
+    height: auto; /* Alto completo */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    z-index: -1; /* Lo manda al fondo */
+    margin-top: -70px; /* Lo manda al fondo */
 }
 
 .video video {
@@ -31,8 +32,6 @@
     width: auto;
     background-color: rgb(36, 36, 37);
     height: 100vh;
-    font-family: Helvetica;
-    padding: 0;
     position:relative;
     align-items:center;
     text-align: center;
@@ -45,7 +44,7 @@
     position: relative;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    margin-top: -250px;
+    margin-top: -110px;
     font-size: 20px;
     font-family: copperplate;
     color: rgb(229, 229, 231);
@@ -71,7 +70,7 @@
 
 .cotizacion h3 {
     position: relative;
-    top: -170px;
+    top: 70px;
     font-size: 17px;
 }
 
@@ -84,7 +83,7 @@
     height: auto;
     background-color: rgb(143, 145, 145);
     position: relative;
-    margin: 2% auto;
+    margin: 7% auto;
     padding: 20px;
     border-radius: 20px;
 }
@@ -120,9 +119,141 @@
 }
 
 .sobre_mi {
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    gap:20px;
+    padding:20px;
 width: auto;
 background-color: rgb(36, 36, 37);
 height: 100vh;
 margin: 0;
 padding: 0;
+}
+
+#tit {
+   font-size: 32px;
+   text-align: center;
+   justify-content: center;
+   position: relative;
+   margin-top: -100px;
+   font-family: copperplate;
+   color: rgb(229, 229, 231);
+   gap: 5px; /* Espacio entre el texto y las líneas */
+}
+
+#im {
+    width: 50%;
+    height: 80%;
+    position: relative;
+}
+
+.sobre_mi h2{
+    color: #aca7a7;
+    font-size: 30px;
+    flex:1;
+    position: relative;
+  }
+
+.sobre_mi p{
+    position:relative;
+    color:rgb(175, 180, 180);
+    font-style:oblique;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin:20px;
+    text-decoration-line:initial;
+
+}
+
+.imgn {
+    align-items:center;
+    justify-content: center;
+width: auto;
+background-color: rgb(77, 77, 78);
+height:100vh;
+margin: 0;
+padding: 0;
+}
+
+.rom-container {
+    margin-left: 15%;
+    margin-right: 5%;
+    width: 800px;
+    display: flex;
+    flex-grow:1;
+    object-fit: cover;
+    height: auto;
+    border-color: aqua;
+    background-color: rgb(77, 77, 78);
+}
+
+#im2 {
+    width: 10px;
+    flex-grow: 1;
+    object-fit: cover;
+    height: 100%;
+    border:0.1px solid rgb(77, 77, 78);
+    position: relative;
+    opacity:.8;
+    transition: .5s ease;
+
+}
+ #im2:hover {
+    cursor: crosshair;
+    width: 400px;
+    opacity: 1;
+    filter: contrast(120%);
+ }
+.tx-container{
+    margin-top: -10px;
+    position: relative;
+    text-align: center;
+    color: #aca7a7;
+    line-height: 1;
+}
+
+#titu {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-top: -70px;
+    font-size: 20px;
+    font-family: copperplate;
+    color: rgb(229, 229, 231);
+    gap: 5px; /* Espacio entre el texto y las líneas */
+}
+
+#titu::before, #titu::after {
+    content: "";
+    flex-grow: 1; /* Hace que las líneas se expandan */
+    height: 2px;
+    background-color: rgb(230, 42, 42);
+}
+#som1 {
+    position: relative;
+    margin-top:auto;
+    font-size: 110px;
+    opacity: 0.3;
+    font-weight: 10;
+    font-family: Brush Script MT;
+    text-align: center;
+}
+.tx-container h2{
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    color: #aca7a7;
+    line-height: 1;
+}
+.tx-container h4{
+    margin-top:20px;
+    position: relative;
+    text-align: center;
+    color: #aca7a7;
+    line-height: 1;
 }
