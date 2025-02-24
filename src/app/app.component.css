@@ -1,32 +1,68 @@
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.inicio {
-    width: auto;
-    height:100vh;
-    text-align: center;
-    display: flex;
-}
-
-.video {  /* Se mantiene en pantalla */
-    width: auto;  /* Ancho completo */
-    height: auto; /* Alto completo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: -70px; /* Lo manda al fondo */
-}
-
-.video video {
+  }
+  
+  header {
+    background-color: transparent !important;
+    margin:0;
+    padding: 0;
+  } 
+  .inicio {
+    position: relative;
+    top:-0px;
+    bottom: 0;
+    margin-left:0;
+    margin-right: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta el video sin deformarlo */
-}
+    height: 100vh;
+    overflow: hidden;
 
+  }
+  
+  /* Contenedor del slider */
+  .img-container {
+    object-position: top;
+    position: relative;
+    width: 300%; /* 3 imágenes: 100% x 3 */
+    height: 120%;
+    animation: slide 12s infinite;
+    z-index: -1;
+  }
+  
+  /* Cada imagen ocupa un tercio del contenedor */
+  .img-container img {
+    margin-top: -200px;
+    width: 33.33%;
+    height: 120%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  /* Animación para deslizar las imágenes */
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    33% {
+      transform: translateX(0%);
+    }
+    44% {
+      transform: translateX(-33.33%);
+    }
+    77% {
+      transform: translateX(-33.33%);
+    }
+    88% {
+      transform: translateX(-66.66%);
+    }
+    100% {
+      transform: translateX(-66.66%);
+    }
+  }
+  
 
 .cotizacion {
     width: auto;
