@@ -10,59 +10,37 @@
     margin:0;
     padding: 0;
   } 
-  .inicio {
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+ .inicio {
     position: relative;
-    top:-0px;
+    top:-40px;
     bottom: 0;
     margin-left:0;
     margin-right: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
+    z-index: -1;
+    animation: slideIn 3s ease-in-out forwards;
 
   }
   
-  /* Contenedor del slider */
-  .img-container {
-    object-position: top;
-    position: relative;
-    width: 300%; /* 3 imágenes: 100% x 3 */
-    height: 120%;
-    animation: slide 12s infinite;
-    z-index: -1;
-  }
-  
-  /* Cada imagen ocupa un tercio del contenedor */
-  .img-container img {
-    margin-top: -200px;
-    width: 33.33%;
-    height: 120%;
+  .video-bg {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: -40px;
     object-fit: cover;
-    object-position: top;
   }
-  
-  /* Animación para deslizar las imágenes */
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    33% {
-      transform: translateX(0%);
-    }
-    44% {
-      transform: translateX(-33.33%);
-    }
-    77% {
-      transform: translateX(-33.33%);
-    }
-    88% {
-      transform: translateX(-66.66%);
-    }
-    100% {
-      transform: translateX(-66.66%);
-    }
-  }
-  
 
 .cotizacion {
     width: auto;
@@ -73,6 +51,26 @@
     text-align: center;
     color: rgb(196, 190, 190);
 }
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px); /* Empieza fuera de la pantalla, a la izquierda */
+  transition: all 2s ease-out;
+  
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px); /* Empieza fuera de la pantalla, a la derecha */
+  transition: all 1s ease-out;
+  
+}
+
+/* Cuando Intersection Observer detecte que el elemento está en pantalla */
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 #titulo {
     display: grid;
@@ -84,7 +82,8 @@
     font-size: 20px;
     font-family: copperplate;
     color: rgb(229, 229, 231);
-    gap: 5px; /* Espacio entre el texto y las líneas */
+    gap: 5px; 
+
 }
 
 #titulo::before, #titulo::after {
@@ -92,6 +91,7 @@
     flex-grow: 1; /* Hace que las líneas se expandan */
     height: 2px;
     background-color: rgb(230, 42, 42);
+ 
 }
 
 #som {
@@ -102,6 +102,7 @@
     font-weight: 10;
     font-family: Brush Script MT;
     text-align: center;
+
 }
 
 .cotizacion h3 {
@@ -110,7 +111,7 @@
     font-size: 17px;
 }
 
-.cuadro {
+#cuadro {
     display: grid;
     gap: 8px;
     text-align: center;
@@ -124,7 +125,7 @@
     border-radius: 20px;
 }
 
-.cuadro label {
+#cuadro label {
     display: block;
     margin: 0 0 0 3px 0;
     font-size: 19px;
@@ -207,42 +208,75 @@ padding: 0;
 .imgn {
     align-items:center;
     justify-content: center;
-width: auto;
-background-color: rgb(77, 77, 78);
-height:100vh;
-margin: 0;
-padding: 0;
-}
-
-.rom-container {
-    margin-left: 15%;
-    margin-right: 5%;
-    width: 800px;
-    display: flex;
-    flex-grow:1;
-    object-fit: cover;
-    height: auto;
-    border-color: aqua;
+    width: auto;
     background-color: rgb(77, 77, 78);
+    height:100vh;
+    margin: 0;
+    padding: 0;
 }
 
-#im2 {
-    width: 10px;
+.rom-container{
+  display: flex;
+  margin-top:-80px;
+  margin-left: 10%;
+  margin-right: 20%;
+  width:900px;
+  height: 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:90px;
+  background-color: rgb(77, 77, 78);
+  
+
+}
+.im2 {
+    top:100px;
+    width: 200px;
     flex-grow: 1;
     object-fit: cover;
-    height: 100%;
     border:0.1px solid rgb(77, 77, 78);
     position: relative;
     opacity:.8;
     transition: .5s ease;
-
+    animation: mo 3s ease-in-out infinite;
 }
- #im2:hover {
+
+  @keyframes mo {
+    0%{
+      transform: translateY(0);
+    }50%{
+      transform: translateY(10px);
+    }100%{
+      trnaform:translatey(0);
+    }
+    }
+    
+  
+
+.marca{
+  position: relative;
+  width:150px;
+  height: 150px;
+}
+ .im2:hover {
     cursor: crosshair;
     width: 400px;
     opacity: 1;
     filter: contrast(120%);
+    z-index: 1;
  }
+.ico{
+  position: absolute;
+  width: 250px;
+  height:120px;
+  transition: opacity 0.3s ease, transform 0.3 ease;
+  opacity:0;
+}
+.marca:hover .ico{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 .tx-container{
     margin-top: -10px;
     position: relative;

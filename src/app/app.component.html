@@ -10,17 +10,16 @@
     <app-navbar></app-navbar>
   </header>
       <section class="inicio">
-        <div class="img-container">
-          <img src="assets/img/fn1.jpg" alt="Imagen 1">
-          <img src="assets/img/fn2.jpg" alt="Imagen 2">
-          <img src="assets/img/fn3.jpg" alt="Imagen 3">
-        </div>
+        <video autoplay loop muted class="video-bg">
+          <source  src="assets/videos/back.mp4" type="video/mp4">
+        </video>
+          
       </section>
     <section class=" cotizacion">
-      <div id="som"><h1>jfrsn</h1></div>
-      <div id= "titulo"><h1>realizar cotizacion</h1></div>
-      <h3>llena el formulario para poderte cotizar</h3>
-      <div class="cuadro">
+      <div class="hidden-left" id="som"><h1>jfrsn</h1></div>
+      <div class= "hidden-right" id= "titulo"><h1>realizar cotizacion</h1></div>
+      <h3 class="hidden-left"> llena el formulario para poderte cotizar</h3>
+      <div class="hidden-left" id="cuadro">
          
         <label>formulario solicitud de cotizacion: </label> 
           <input class="for" type="text" placeholder="nombres">
@@ -44,13 +43,13 @@
     </section>
     <section class="sobre_mi">
       
-       <img src="assets/img/dd.jpg" id="im">
+       <img class="hidden-left" src="assets/img/dd.jpg" id="im">
 
-       <div class="text-container">
-       <div id="tit"><h1>con mas de 3 años <br>
+       <div  class="text-container">
+       <div class="hidden-right" id="tit"><h1>con mas de 3 años <br>
         de experiencia</h1></div>
-      <h2> asesoria e instalacion de camaras de seguridad </h2>
-      <p>
+      <h2 class="hidden-right"> asesoria e instalacion de camaras de seguridad </h2>
+      <p class="hidden-right">
         Con más de tres años de experiencia en la instalación, 
         asesoría y ajuste de cámaras CCTV, he perfeccionado mi 
         conocimiento en sistemas de videovigilancia. Me especializo
@@ -66,22 +65,47 @@
     </section>
     <section class="imgn">
       <div class="tx-container">
-        <div id="som1"><h1>jfrsn</h1></div>
-      <div id="titu"><h1>marcas que manejamos</h1></div>
-      <h2>instalacion y mantenimiento con diferentes marcas</h2>
-      <h4>analogas y digitales</h4><br><br>
-    </div>
+        <div class="hidden-left" id="som1"><h1>jfrsn</h1></div>
+        <div class="hidden-right" id="titu"><h1>Marcas que manejamos</h1></div>
+        <h2 class="hidden-right">Instalación y mantenimiento con diferentes marcas</h2>
+        <h4 class="hidden-right">Análogas y digitales</h4>
+        <br><br>
+      </div>
+    
       <div class="rom-container">
-      <img src="assets/img/ahu.jpg" id="im2">
-      <img src="assets/img/han.jpg" id="im2">
-      <img src="assets/img/hik.jpg" id="im2">
-      <img src="assets/img/hil.jpg" id="im2">
-    </div>
+        <div class="marca">
+          <img src="assets/iconos/ahua.png" class="ico">
+          <img src="assets/img/ahu.jpg" class="im2">
+          
+        </div>
+    
+        <div class="marca">
+          <img src="assets/iconos/hanwha.png" class="ico">
+          <img src="assets/img/han.jpg" class="im2">
+          
+        </div>
+    
+        <div class="marca">
+          <img src="assets/iconos/hikvision.png" class="ico">
+          <img src="assets/img/hik.jpg" class="im2">
+         
+        </div>
+    
+        <div class="marca">
+          <img src="assets/iconos/hilook.png" class="ico">
+          <img src="assets/img/hil.jpg" class="im2">
+         
+        </div>
+      </div>
     </section>
-  
-  </div>
-
-
+    <section class="contacto">
+      <h1>contactenos</h1>
+      <h3>jbs.jefer@gmail.com</h3>
+      <h3>cel: 3133068579</h3>
+      <h3>bogota - Colombia</h3>
+      
+    </section>
+    
 
 
 

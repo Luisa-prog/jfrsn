@@ -9,8 +9,19 @@
     justify-content: space-between;
     align-items: center;
     padding:0;
-
+    animation: slideIn 3s ease-in-out forwards;
 }
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 .topbar a {
     color: #fff;
@@ -24,13 +35,20 @@
 
 }
 .cont-container {
+    top:10px;
     position: relative;
     margin-right: 600px;
     align-items: center;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Courier New', monospace;
     gap: -300px;
     padding: 0;
+}
+
+.cont-container h3{
+    position: relative;
+    top: -20px;
+
 }
 
 .btn-container{
