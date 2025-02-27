@@ -1,5 +1,5 @@
 .topbar {
-    background-color: #222;
+    background-image: url(src/assets/img/ddd.jpg);
     color: #fff;
     align-items: center;
     font-size: 30px;
@@ -33,11 +33,13 @@
     height: auto;
     cursor:pointer;
 
+} #contactos:hover{
+transform: scale(1.2);
 }
 .cont-container {
     top:10px;
     position: relative;
-    margin-right: 600px;
+    margin-right: 500px;
     align-items: center;
     font-size: 13px;
     font-family: 'Courier New', monospace;
@@ -61,13 +63,13 @@
     position: relative;
     cursor: pointer;
     font-size: 20px;
-    background: #222;
+    background:transparent;
     color: rgb(240, 230, 230);
     border-radius: 8%;
     height: 50px;
     width: 150px;
     overflow: hidden;
-    box-shadow: 6px 4px 3px black;
+    box-shadow: 6px 4px 3px transparent;
     z-index: 1;
 }
 
@@ -80,6 +82,7 @@
     border-radius: inherit; /* Bordes redondeados */
     background-image: conic-gradient(rgb(255, 255, 255) 70deg, transparent 180deg);
     animation: rotate 1s linear infinite;
+    transform: scale(1.2);
     z-index: -2;
 }
 
@@ -96,7 +99,7 @@
     position: absolute;
     height: 43px;
     width: 143px;
-    background: #222;
+    background: black;
     inset:1.05px;
     border-radius: inherit;
     z-index: -1;

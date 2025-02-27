@@ -16,12 +16,15 @@ export class AppComponent implements AfterViewInit {
         }
       });
     });
-    window.addEventListener('load', () => {
-      const video = document.querySelector('video');
-      if (video) {
-        video.play().catch(error => console.log('Autoplay bloqueado:', error));
-      }
-    });
+    const video = document.getElementById("video-bg") as HTMLVideoElement;
+
+    if (video){
+      video.play().catch(error =>{
+        console.log("el navegador no permite la reproduccion del video automatico");
+        setTimeout(() => video.play(),1000);
+      })
+    }
+  
     const elements = Array.from(document.querySelectorAll('.hidden-left, .hidden-right')) as HTMLElement[];
     elements.forEach(element => observer.observe(element));
   }
