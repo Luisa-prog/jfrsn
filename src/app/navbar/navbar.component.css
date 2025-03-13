@@ -1,95 +1,106 @@
-/* Estilos básicos */
+/* Contenedor principal del navbar */
 .navbar {
-  display: flex;
-  margin-left: 40px ;
+  margin-left:40px;
   margin-right: 40px;
-  background-color: #888282;
-  padding: 10px;
-  margin-top: 0;
-  position: relative; 
+  display: flex;
+  width: 85%;
+  top: 75px;
   align-items: center;
   justify-content: space-between;
-  animation: slideIn 3s ease-out forwards;/* Mantiene el menú dentro del nav */
-}
-@keyframes slideIn {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  padding: 10px 40px;
+  background-color: #5f5454;
+  position: absolute;
 }
 
+/* Botón menú hamburguesa (Móvil) */
 .menu-toggle {
   background: none;
   border: none;
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   cursor: pointer;
-  align-self: flex-end;
-  z-index: 2;
+  display: none; /* Se oculta en escritorio */
 }
 
-/* Menú lateral oculto inicialmente */
-ul {
+/* Estilos de la lista de navegación */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de cada elemento del menú */
+.menu li {
+  position: relative;
+}
+
+/* Enlaces dentro del menú */
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Submenú desplegable */
+.submenu-items {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: #222;
   position: absolute;
-  top: 50px; /* Alinea el menú debajo del botón */
-  left: -100%; /* Oculto fuera de la pantalla */
-  width: 200px; /* Ajusta el ancho del menú */
-  height: auto;
-  transition: left 0.3s ease-in-out;
+  top: 100%;
+  left: 0;
+  background: #222;
+  width: 200px;
+  display: none;
 }
 
-ul.open {
-  left: 0; /* Muestra el menú deslizándolo */
-}
-
-ul li {
+.submenu-items li {
   padding: 10px;
   border-bottom: 1px solid #aca7a7;
-  position:relative;
 }
 
-ul li ul {
-  position: obsolute;
-  top: 0;
-  left: 100%;
-  width:180px;
-  display:none;
-  background: #222;
-  border: none;
-  color: white;
-  font-size: 15px;
-
-}
-
-ul li:hover > ul{
+/* Mostrar submenú al pasar el mouse */
+.submenu:hover .submenu-items {
   display: block;
-
-
 }
 
-ul li a {
-  color: white;
-  text-decoration: none;
-}
-
+/* Contenedor de iconos */
 .iconos-container {
   display: flex;
   gap: 15px;
-  margin-left: auto;
-  font-size: 20px;
-
 }
-  .iconos-container img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-  
+
+.iconos-container img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.iconos-container img:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ RESPONSIVE - Mostrar menú hamburguesa en móviles */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    background: #222;
+    width: 200px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .menu.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
